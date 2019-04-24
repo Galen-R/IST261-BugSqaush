@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Collections;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 public class GameBoard extends JFrame {
 
@@ -47,7 +46,7 @@ public class GameBoard extends JFrame {
 
         for (int val : cardVals) {
             Card c = new Card();
-            c.setIcon(new ImageIcon(getClass().getResource("/bugsquash_v3/items/CardBack(Small)biggestest.png")));
+            c.setIcon(new ImageIcon(getClass().getResource("/bugsquash_v3/items/CardBack(Small)Bug.png")));
             c.setOpaque(false);
             c.setContentAreaFilled(false);
             c.setBorderPainted(false);
@@ -62,7 +61,7 @@ public class GameBoard extends JFrame {
         }
                 break;
 //Medium
-            case "Medium":
+            case "medium":
                 for (int i = 0; i < 12; i++) {
                     cardVals.add(i);
                     cardVals.add(i);
@@ -71,7 +70,7 @@ public class GameBoard extends JFrame {
 
         for (int val : cardVals) {
             Card c = new Card();
-            c.setIcon(new ImageIcon(getClass().getResource("/bugsquash_v3/items/CardBack(Small)biggestest.png")));
+            c.setIcon(new ImageIcon(getClass().getResource("/bugsquash_v3/items/CardBack(Small)Bug.png")));
             c.setOpaque(false);
             c.setContentAreaFilled(false);
             c.setBorderPainted(false);
@@ -86,23 +85,15 @@ public class GameBoard extends JFrame {
         }
                 break;
 //Hard                
-            case "Hard":
-                for (int i = 0; i < 20; i++) {
-                    cardVals.add(i);
-                    cardVals.add(i);
-                }
-                break;
-//default
-            default:
-                for (int i = 0; i < 14; i++) {
+            case "hard":
+                for (int i = 0; i < 16; i++) {
                     cardVals.add(i);
                     cardVals.add(i);
                 }
                 Collections.shuffle(cardVals);
-
-        for (int val : cardVals) {
+                for (int val : cardVals) {
             Card c = new Card();
-            c.setIcon(new ImageIcon(getClass().getResource("/bugsquash_v3/items/CardBack(Small)biggestest.png")));
+            c.setIcon(new ImageIcon(getClass().getResource("/bugsquash_v3/items/CardBack(Small)Bug.png")));
             c.setOpaque(false);
             c.setContentAreaFilled(false);
             c.setBorderPainted(false);
@@ -115,6 +106,10 @@ public class GameBoard extends JFrame {
             });
             cardsList.add(c);
         }
+                break;
+//default
+            default:
+               JOptionPane.showMessageDialog(this, "Someone didnt learn to follow directions, huh");
                 break;
         }
         
