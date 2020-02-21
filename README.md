@@ -1,2 +1,3 @@
 # semesterProjectIST261
-This has my final deliverable with a diagram of what i would like to be included in the final functionality.
+This is Bug Squash! 
+This is a card game where you match the cards to squish the bugs!
